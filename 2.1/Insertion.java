@@ -1,10 +1,8 @@
 import edu.princeton.cs.algs4.*;
 /*******************************************************************************************
-*选择排序
-*最简单的排序方法
-*最暴力的实现方法
+*插入排序
 ******************************************************************************************/
-public class Selection{
+public class Insertion{
 	public static boolean less(Comparable v, Comparable w){
 		return v.compareTo(w)<0;
 	}
@@ -15,7 +13,7 @@ public class Selection{
 	}
 	private static void show(Comparable[] a){
 		for(int i=0;i<a.length;i++)
-			StdOut.print(a[i]+"");
+			StdOut.print(a[i]+" ");
 		StdOut.println();
 	}
 	public static boolean isSorted(Comparable[] a){
@@ -27,10 +25,10 @@ public class Selection{
 	public static void sort(Comparable[] a){
 		int N = a.length;
 		for(int i=0;i<N;i++){
-			int min = i;
-			for (int j=i;j<N;j++)
-				if(less(a[j],a[min])) min=j;
-			exch(a,i,min);
+			for(int j=i;j>0&&less(a[j],a[j-1]);j--){
+				exch(a,j,j-1);
+				show(a);
+			}
 		}
 
 	}
