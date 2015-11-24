@@ -1,3 +1,4 @@
+import edu.princeton.cs.algs4.*;
 public class Merge{
 	private static Comparable[] aux;
 	public static void merge(Comparable[] a, int lo, int mid, int hi){

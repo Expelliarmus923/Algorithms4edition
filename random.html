@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<title>随机数生成</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		var tbody = document.getElementById("tbody");
+		var num ="",vol="";
+		for(var i=0;i<10;i++){
+			num+='<th>'+parseInt(10*Math.random()+10*Math.random())+'</th>';
+		}
+		var html="<tr>"+num+"</tr>"
+		tbody.innerHTML=html;
+	}
+	</script>
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<table class="table">
+			<tbody id="tbody">
+			</tbody>
+		</table>
+		</div>
+	</div>
+	</div>
+		
+	</div>
+</body>
+</html>
